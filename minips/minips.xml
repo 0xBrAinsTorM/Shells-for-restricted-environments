@@ -1,12 +1,9 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!-- C:\Windows\Microsoft.NET\Framework64\v4.0.30319\msbuild.exe pshell.xml -->
-  <!-- Author: InfosecMatter, Twitter: @InfosecMatter -->
-  <!-- License: MIT License -->
   <Target Name="Test">
-   <MiniPS />
+   <SecianusPS />
   </Target>
     <UsingTask
-    TaskName="MiniPS"
+    TaskName="SecianusPS"
     TaskFactory="CodeTaskFactory"
     AssemblyFile="C:\Windows\Microsoft.Net\Framework\v4.0.30319\Microsoft.Build.Tasks.v4.0.dll" >
     <Task>
@@ -23,7 +20,7 @@ using System.Text;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
                             
-public class MiniPS :  Task, ITask {
+public class SecianusPS :  Task, ITask {
 	public override bool Execute() {
 		while(true) {
 			Console.Write("PS> ");
